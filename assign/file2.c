@@ -12,14 +12,8 @@ void foo(int a,int b){
 
   /*
     Points-to information as observed at the last program point in function Foo:
-    Pointer Var %5={%3}
-    Pointer Var %6={%4}
-  
-    Alias relationships between the pointers in function Foo:
-    		    %5   %6
-    Pointer Var %5  Yes  No
-    Pointer Var %6  No   Yes
-  
+    p -> {}
+    y -> {}
   */    
 
 }
