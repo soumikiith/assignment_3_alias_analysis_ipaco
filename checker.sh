@@ -45,3 +45,13 @@ else
     exit 1
 fi
 
+# Check if private_test/test.c exists
+test_file="private_test/test.c"
+if [ ! -f "$test_file" ]; then
+    echo "❌ File '$test_file' does not exist!"
+    exit 1
+else
+    echo "✅ File '$test_file' found."
+fi
+
+
