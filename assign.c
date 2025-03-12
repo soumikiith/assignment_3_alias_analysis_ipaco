@@ -55,9 +55,9 @@ void test3(){
 
   /*
     Alias information as observed at the last program point in function test3:
-    p -> {y}
-    y -> {p}
-    p1 -> {}
+    p -> {y, p1}
+    y -> {p, p1}
+    p1 -> {p, y}
   
   
   */   
@@ -93,10 +93,10 @@ void test5(int *x, int *y)
 
   /*
     Alias information as observed at the last program point in function test5:
-    x -> {}
-    y -> {}
-    c -> {}
-    d -> {}
+    x -> {c}
+    y -> {d}
+    c -> {x}
+    d -> {y}
   */ 
 }
 
@@ -177,5 +177,6 @@ int main()
   test5(&a, &b);
   test6();
   test7();
-  test8();
+  int **r, flag=0;
+  test8(r, flag);
 }
