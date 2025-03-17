@@ -157,8 +157,8 @@ void test8(int **r, int flag) {
     **r = 20;  // Dereferencing r will modify *a or *b depending on flag.
 
     // p may now point to either a or b, so p and q may alias indirectly through r
-    *p = 30;  // Dereferencing p (which might point to either a or b)
-    *q = 40;  // Dereferencing q (which might point to either a or b)
+    *p1 = 30;  // Dereferencing p (which might point to either a or b)
+    *p2 = 40;  // Dereferencing q (which might point to either a or b)
     /*
     Alias information as observed at the last program point in function test6:
     r -> {p1, p2}
